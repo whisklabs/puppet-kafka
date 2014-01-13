@@ -23,13 +23,10 @@ class kafka::install inherits kafka {
   
   exec { "untar ${kafka::package::basefilename}":
     command => "tar xfvz ${package_dir}/${kafka::package::basefilename} -C $install_dir",
-    cwd => "${install_dir}",
-    creates => "${install_dir}/${kafka::package::basename}",
+    creates => "${install_dir}/${kafka::package::basename}/config",
     alias => "untar-kafka",
-    refreshonly => true,
-    subscribe => File["${package_dir}/${kafka::package::basefilename}"],
+    require => File["${package_dir}/${kafka::package::basefilename}"],
     user => 'kafka',
-    before => [ File["kafka-symlink"], File["kafka-app-dir"]],
     path    => ["/bin", "/usr/bin", "/usr/sbin"],
   }
   

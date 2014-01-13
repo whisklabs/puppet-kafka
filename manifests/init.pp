@@ -11,7 +11,7 @@ class kafka (
   anchor { 'kafka::begin': } ->
   class { '::kafka::package': } ->
   class { '::kafka::install': } ->
-  class { '::kafka::config': } ->
+  class { '::kafka::config': } ~>
   class { '::kafka::service': } ->
   anchor { 'kafka::end': }
 
