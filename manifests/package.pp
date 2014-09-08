@@ -16,7 +16,7 @@ class kafka::package inherits kafka {
 
     $filenameArray = split($package_url, '/')
     $basefilename = $filenameArray[-1]
-    $basename = regsubst($basefilename, '(.+)\.tar\.gz$', '\1')
+    $basename = regsubst($basefilename, '^(.+)\.(zip|tgz|tar\.\w+)$', '\1')
 
     $sourceArray = split($package_url, ':')
     $protocol_type = $sourceArray[0]
