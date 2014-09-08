@@ -11,7 +11,7 @@ A puppet module for [Apache Kafka](http://kafka.apache.org/) setup.
           broker_id => '0',
           hostname => $::ipaddress_eth1, # $::ipaddress is picked by default
           zookeeper_connect => 'localhost:2181',
-          package_url => 'http://mirrors.ukfast.co.uk/sites/ftp.apache.org/kafka/0.8.0/kafka_2.8.0-0.8.0.tar.gz'
+          package_url => 'http://mirror.symnds.com/software/Apache/kafka/0.8.1.1/kafka_2.10-0.8.1.1.tgz'
         }
     }
 
