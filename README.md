@@ -21,6 +21,8 @@ A puppet module for [Apache Kafka](http://kafka.apache.org/) setup.
    - `hostname` - the hostname to bind. expected to be available for other brokers and clients
    - `zookeeper_connect` - zookeeper connection string
    - `package_url` - might use http, ftp, puppet or file scheme
+   - `statsd_host` - the statsd hostname
+   - `statsd_port` - the statsd port
    
 ### Source Code
 

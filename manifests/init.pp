@@ -4,7 +4,9 @@ class kafka (
   $zookeeper_connect = $kafka::params::zookeeper_connect,
   $package_dir = $kafka::params::package_dir,
   $package_url = $kafka::params::package_url,
-  $install_dir = $kafka::params::install_dir ) inherits kafka::params {
+  $install_dir = $kafka::params::install_dir,
+  $statsd_host = $kafka::params::statsd_host,
+  $statsd_port = $kafka::params::statsd_port ) inherits kafka::params {
 
   require java
   
