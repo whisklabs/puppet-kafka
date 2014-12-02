@@ -109,3 +109,15 @@ zookeeper.connect=<%= @zookeeper_connect %>
 
 # Timeout in ms for connecting to zookeeper
 zookeeper.connection.timeout.ms=1000000
+
+<% unless @statsd_port.nil? || @statsd_port.empty? %>
+############################# kafka-statsd-reporter #############################
+# https://github.com/myfitnesspal/kafka-statsd-reporter
+# don't forget to build the kafka-statsd-1.0.0.jar jar and add it to the libs/
+#################################################################################
+kafka.metrics.reporters=com.myfitnesspal.kafka.KafkaStatsdMetricsReporter
+kafka.statsd.metrics.reporter.enabled=true
+kafka.statsd.metrics.host=<%= @statsd_host %>
+kafka.statsd.metrics.port=<%= @statsd_port %>
+kafka.statsd.metrics.group=kafka
+<% end %>
