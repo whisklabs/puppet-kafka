@@ -7,5 +7,6 @@ class kafka::params {
   $hostname    = hiera('kafka:hostname', $::ipaddress)
   $statsd_host = hiera('kafka:statsd_host', $::statsd_host)
   $statsd_port = hiera('kafka:statsd_port', $::statsd_port)
+  $statsd_port = hiera('kafka:statsd_exclude_regex', $::statsd_exclude_regex)
   $zookeeper_connect = hiera('kafka:zookeeper_connect', 'localhost:2181')
 }
