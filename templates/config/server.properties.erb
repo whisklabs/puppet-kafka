@@ -119,5 +119,6 @@ kafka.metrics.reporters=com.myfitnesspal.kafka.KafkaStatsdMetricsReporter
 kafka.statsd.metrics.reporter.enabled=true
 kafka.statsd.metrics.host=<%= @statsd_host %>
 kafka.statsd.metrics.port=<%= @statsd_port %>
-kafka.statsd.metrics.group=kafka
+kafka.statsd.metrics.group=<%= scope.lookupvar('::hostname') %>
+kafka.statsd.metrics.exclude.regex=<%= @statsd_exclude_regex %>
 <% end %>

@@ -23,6 +23,7 @@ A puppet module for [Apache Kafka](http://kafka.apache.org/) setup.
    - `package_url` - might use http, ftp, puppet or file scheme
    - `statsd_host` - the statsd hostname
    - `statsd_port` - the statsd port
+   - `statsd_exclude_regex` - the statsd exclude.regex eg. (?!(AllTopicsBytesInPerSec|AllTopicsBytesOutPerSec|AllTopicsMessagesInPerSec|AllTopicsFailedProduceRequestsPerSec)).+
    
 ### Source Code
 
