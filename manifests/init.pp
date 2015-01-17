@@ -7,10 +7,11 @@ class kafka (
   $install_dir = $kafka::params::install_dir,
   $statsd_host = $kafka::params::statsd_host,
   $statsd_port = $kafka::params::statsd_port,
+  $statsd_enabled = $kafka::params::statsd_enabled,
   $statsd_exclude_regex = $kafka::params::statsd_exclude_regex ) inherits kafka::params {
 
   require java
-  
+
   anchor { 'kafka::begin': } ->
   class { '::kafka::package': } ->
   class { '::kafka::install': } ->
