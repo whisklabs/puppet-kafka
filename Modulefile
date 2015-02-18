@@ -1,5 +1,5 @@
 name    'whisklabs-kafka'
-version '0.0.5'
+version '0.0.6'
 author 'whisklabs'
 source 'https://github.com/whisklabs/puppet-kafka'
 license 'Apache License, Version 2.0'
