@@ -9,4 +9,5 @@ class kafka::params {
   $statsd_enabled       = hiera('kafka:statsd_enabled', $::statsd_enabled)
   $statsd_exclude_regex = hiera('kafka:statsd_exclude_regex', $::statsd_exclude_regex)
   $zookeeper_connect    = hiera('kafka:zookeeper_connect', 'localhost:2181')
+  $delete_topic_enabled = hiera('kafka:delete_topic_enabled', false)
 }

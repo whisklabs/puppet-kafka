@@ -122,3 +122,8 @@ kafka.statsd.metrics.port=<%= @statsd_port %>
 kafka.statsd.metrics.group=<%= scope.lookupvar('::hostname') %>
 kafka.statsd.metrics.exclude.regex=<%= @statsd_exclude_regex %>
 <% end %>
+
+<% unless @delete_topic_enabled.nil? or @delete_topic_enabled == false -%>
+# Whether topic deletion should be allowed. Requires kafka >= 0.8.2
+delete.topic.enable=true
+<% end -%>

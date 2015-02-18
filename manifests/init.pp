@@ -8,7 +8,8 @@ class kafka (
   $statsd_host = $kafka::params::statsd_host,
   $statsd_port = $kafka::params::statsd_port,
   $statsd_enabled = $kafka::params::statsd_enabled,
-  $statsd_exclude_regex = $kafka::params::statsd_exclude_regex ) inherits kafka::params {
+  $statsd_exclude_regex = $kafka::params::statsd_exclude_regex,
+  $delete_topic_enabled = $kafka::params::delete_topic_enabled) inherits kafka::params {
 
   require java
 
