@@ -5,6 +5,7 @@ class kafka (
   $package_dir = $kafka::params::package_dir,
   $package_url = $kafka::params::package_url,
   $install_dir = $kafka::params::install_dir,
+  $log_retention_hours = $kafka::params::log_retention_hours,
   $statsd_host = $kafka::params::statsd_host,
   $statsd_port = $kafka::params::statsd_port,
   $statsd_exclude_regex = $kafka::params::statsd_exclude_regex ) inherits kafka::params {
