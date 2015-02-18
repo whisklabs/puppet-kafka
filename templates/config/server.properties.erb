@@ -85,7 +85,10 @@ log.flush.interval.ms=1000
 # from the end of the log.
 
 # The minimum age of a log file to be eligible for deletion
-log.retention.hours=168
+#
+<% unless @log_retention_hours.nil? || @log_retention_hours.empty? %>
+log.retention.hours=<%= @log_retention_hours %>
+<% end %>
 
 # A size-based retention policy for logs. Segments are pruned from the log as long as the remaining
 # segments don't drop below log.retention.bytes.
