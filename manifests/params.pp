@@ -3,6 +3,7 @@ class kafka::params {
   $package_dir          = hiera('kafka:package_dir', '/var/lib/kafka')
   $package_url          = hiera('kafka:package_url', undef)
   $install_dir          = hiera('kafka:install_dir', '/usr/local/kafka')
+  $logs_dir             = hiera('kafka:logs_dir', '/var/log/kafka')
   $hostname             = hiera('kafka:hostname', $::ipaddress)
   $log_retention_hours  = hiera('kafka:log_retention_hours', '168')
   $statsd_host          = hiera('kafka:statsd_host', $::statsd_host)
