@@ -51,7 +51,9 @@ socket.request.max.bytes=104857600
 ############################# Log Basics #############################
 
 # A comma seperated list of directories under which to store log files
-log.dirs=/tmp/kafka-logs
+<% unless @datalog_dir.nil? || @datalog_dir.empty? -%>
+log.dirs=<%= @datalog_dir %>
+<% end -%>
 
 # The number of logical partitions per topic per server. More partitions allow greater parallelism
 # for consumption, but also mean more files.
