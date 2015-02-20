@@ -21,6 +21,7 @@ A puppet module for [Apache Kafka](http://kafka.apache.org/) setup.
    - `hostname` - the hostname to bind. expected to be available for other brokers and clients
    - `zookeeper_connect` - zookeeper connection string
    - `package_url` - might use http, ftp, puppet or file scheme
+   - `datalog_dir` - the path where kafka should store data. By default /tmp/kafka-logs
    - `statsd_host` - the statsd hostname
    - `statsd_port` - the statsd port
    - `statsd_exclude_regex` - the statsd exclude.regex eg. (?!(AllTopicsBytesInPerSec|AllTopicsBytesOutPerSec|AllTopicsMessagesInPerSec|AllTopicsFailedProduceRequestsPerSec)).+
