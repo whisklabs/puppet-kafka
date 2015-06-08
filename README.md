@@ -23,6 +23,8 @@ A puppet module for [Apache Kafka](http://kafka.apache.org/) setup.
    - `package_url` - might use http, ftp, puppet or file scheme
    - `logs_dir` - the path where kafka should store its logs. By default /var/log/kafka/
    - `datalog_dir` - the path where kafka should store data. By default /tmp/kafka-logs
+   - `log_retention_minutes` - How many minutes the datalog should be keept since last write to it. If defined, takes preference over log_retention_hours. By default is not defined.
+   - `log_retention_hours` - How many hours the datalog should be keept since last write to it. By default 168 hours.
    - `statsd_host` - the statsd hostname
    - `statsd_port` - the statsd port
    - `statsd_exclude_regex` - the statsd exclude.regex eg. (?!(AllTopicsBytesInPerSec|AllTopicsBytesOutPerSec|AllTopicsMessagesInPerSec|AllTopicsFailedProduceRequestsPerSec)).+
