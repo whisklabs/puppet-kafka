@@ -88,9 +88,9 @@ log.flush.interval.ms=1000
 
 # The minimum age of a log file to be eligible for deletion
 #
-<% if @log_retention_minutes -%>
+<% if !@log_retention_minutes.nil? && !@log_retention_minutes.empty? -%>
 log.retention.minutes=<%= @log_retention_minutes %>
-<% elsif @log_retention_hours -%>
+<% elsif !@log_retention_hours.nil? && !@log_retention_hours.empty? -%>
 log.retention.hours=<%= @log_retention_hours %>
 <% end -%>
 
