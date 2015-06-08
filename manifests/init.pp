@@ -8,6 +8,7 @@ class kafka (
   $logs_dir = $kafka::params::logs_dir,
   $datalog_dir = $kafka::params::datalog_dir,
   $log_retention_hours = $kafka::params::log_retention_hours,
+  $log_retention_minutes = $kafka::params::log_retention_minutes,
   $statsd_host = $kafka::params::statsd_host,
   $statsd_port = $kafka::params::statsd_port,
   $statsd_enabled = $kafka::params::statsd_enabled,

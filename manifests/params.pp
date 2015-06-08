@@ -7,6 +7,7 @@ class kafka::params {
   $hostname             = hiera('kafka:hostname', $::ipaddress)
   $datalog_dir          = hiera('kafka:datalog_dir', '/tmp/kafka-logs')
   $log_retention_hours  = hiera('kafka:log_retention_hours', '168')
+  $log_retention_minutes = hiera('kafka:log_retention_minutes', undef)
   $statsd_host          = hiera('kafka:statsd_host', $::statsd_host)
   $statsd_port          = hiera('kafka:statsd_port', $::statsd_port)
   $statsd_enabled       = hiera('kafka:statsd_enabled', $::statsd_enabled)
