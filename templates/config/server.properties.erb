@@ -47,6 +47,23 @@ socket.receive.buffer.bytes=1048576
 # The maximum size of a request that the socket server will accept (protection against OOM)
 socket.request.max.bytes=104857600
 
+############################# Message Sizes #############################
+
+# The maximum size of a message that the server can receive. It is important that this property
+# be in sync with the maximum fetch size your consumers use or else an unruly producer will be able
+# to publish messages too large for consumers to consume.
+message.max.bytes=<%= @message_max_bytes %>
+
+# The number of bytes of messages to attempt to fetch for each partition in the fetch requests the
+# replicas send to the leader.
+replica.fetch.max.bytes=<%= @replica_fetch_max_bytes %>
+
+# The number of byes of messages to attempt to fetch for each topic-partition in each fetch request.
+# These bytes will be read into memory for each partition, so this helps control the memory used by the
+# consumer. The fetch request size must be at least as large as the maximum message size the server allows
+# or else it is possible for the producer to send messages larger than the consumer can fetch.
+fetch.message.max.bytes=<%= @fetch_message_max_bytes %>
+
 
 ############################# Log Basics #############################
 
